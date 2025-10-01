@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutureSkill Courses</title>
+  <style>
+    body {
+      font-family: 'Prompt', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: #8e24aa;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #8e24aa;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      padding: 6px 35px 6px 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .search-box i {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #888;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 18px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .icons span {
+      position: relative;
+    }
+
+    .icons .badge {
+      position: absolute;
+      top: -5px;
+      right: -8px;
+      background: red;
+      color: white;
+      font-size: 10px;
+      padding: 2px 5px;
+      border-radius: 50%;
+    }
+
+    /* ===== Container & Courses ===== */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .course-content {
+      padding: 15px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 0 8px;
+    }
+
+    .course-teacher {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .course-meta {
+      font-size: 13px;
+      color: #999;
+      margin-bottom: 10px;
+    }
+
+    .course-price {
+      margin-top: auto;
+    }
+
+    .course-price .sale {
+      font-size: 18px;
+      color: #c2185b;
+      font-weight: bold;
+    }
+
+    .course-price .original {
+      font-size: 14px;
+      color: #999;
+      text-decoration: line-through;
+      margin-left: 5px;
+    }
+
+    .btn-buy {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      padding: 10px;
+      background: #8e24aa;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn-buy:hover {
+      background: #6a1b9a;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .nav {
+        flex: 1 1 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .search-box {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+  <!-- ใช้ไอคอนจาก Font Awesome -->
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">FutureSkill</div>
+    <nav class="nav">
+      <a href="login.html">คอร์สออนไลน์</a>
+      <a href="#">หลักสูตร Onsite</a>
+      <a href="#">คอร์สแนะนำ</a>
+      <a href="#">บทความ</a>
+    </nav>
+    <div class="search-box">
+      <input type="text" placeholder="ค้นหาคอร์ส...">
+      <i class="fas fa-search"></i>
+    </div>
+    <div class="icons">
+      <span><i class="fas fa-shopping-cart"></i><span class="badge">2</span></span>
+      <span><i class="fas fa-bell"></i></span>
+      <span><i class="fas fa-user-circle"></i></span>
+    </div>
+  </header>
+
+  <!-- Courses -->
+  <div class="container">
+    <h2>เรียนการจัดการธุรกิจ</h2>
+    <div class="course-grid">
+      
+      <!-- Card 1 -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="https://cdn.pixabay.com/photo/2024/11/22/13/43/autumn-9216501_1280.jpg" alt="Course">
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">การบริหารจัดการความเสี่ยงและเหตุการณ์ไม่พึงประสงค์</h3>
+          <p class="course-teacher">จักรกฤษณ์ วิเชียรตาเวียงไกร</p>
+          <p class="course-meta">366 คนเรียน • 108 ชม.</p>
+          <div class="course-price">
+            <span class="sale">฿790.00</span>
+            <span class="original">฿1,790.00</span>
+          </div>
+          <a href="in_couse.html" class="btn-buy">ซื้อคอร์สนี้</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="https://via.placeholder.com/400x200.png?text=Course+2" alt="Course">
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">เขียนภาษาอังกฤษธุรกิจให้ตรงใจ</h3>
+          <p class="course-teacher">ศริน ตัน</p>
+          <p class="course-meta">1,936 คนเรียน • 54 นาที</p>
+          <div class="course-price">
+            <span class="sale">฿690.00</span>
+            <span class="original">฿1,690.00</span>
+          </div>
+          <a href="learn.html" class="btn-buy">ซื้อคอร์สนี้</a>
+        </div>
+      </div>
+       <!-- Card 2 -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="https://via.placeholder.com/400x200.png?text=Course+2" alt="Course">
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">เขียนภาษาอังกฤษธุรกิจให้ตรงใจ</h3>
+          <p class="course-teacher">ศริน ตัน</p>
+          <p class="course-meta">1,936 คนเรียน • 54 นาที</p>
+          <div class="course-price">
+            <span class="sale">฿690.00</span>
+            <span class="original">฿1,690.00</span>
+          </div>
+          <a href="learn.html" class="btn-buy">ซื้อคอร์สนี้</a>
+        </div>
+      </div>
+       <!-- Card 2 -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="https://via.placeholder.com/400x200.png?text=Course+2" alt="Course">
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">เขียนภาษาอังกฤษธุรกิจให้ตรงใจ</h3>
+          <p class="course-teacher">ศริน ตัน</p>
+          <p class="course-meta">1,936 คนเรียน • 54 นาที</p>
+          <div class="course-price">
+            <span class="sale">฿690.00</span>
+            <span class="original">฿1,690.00</span>
+          </div>
+          <a href="learn.html" class="btn-buy">ซื้อคอร์สนี้</a>
+        </div>
+      </div>
+       <!-- Card 2 -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="https://via.placeholder.com/400x200.png?text=Course+2" alt="Course">
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">เขียนภาษาอังกฤษธุรกิจให้ตรงใจ</h3>
+          <p class="course-teacher">ศริน ตัน</p>
+          <p class="course-meta">1,936 คนเรียน • 54 นาที</p>
+          <div class="course-price">
+            <span class="sale">฿690.00</span>
+            <span class="original">฿1,690.00</span>
+          </div>
+          <a href="learn.html" class="btn-buy">ซื้อคอร์สนี้</a>
+        </div>
+      </div>
+       <!-- Card 2 -->
+      <div class="course-card">
+        <div class="course-image">
+          <img src="https://via.placeholder.com/400x200.png?text=Course+2" alt="Course">
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">เขียนภาษาอังกฤษธุรกิจให้ตรงใจ</h3>
+          <p class="course-teacher">ศริน ตัน</p>
+          <p class="course-meta">1,936 คนเรียน • 54 นาที</p>
+          <div class="course-price">
+            <span class="sale">฿690.00</span>
+            <span class="original">฿1,690.00</span>
+          </div>
+          <a href="learn.html" class="btn-buy">ซื้อคอร์สนี้</a>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+</body>
+</html>

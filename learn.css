@@ -1,0 +1,255 @@
+/* ใช้ @import หรือ <link> เพื่อเพิ่มฟอนต์ไทยหากต้องการ */
+body {
+    font-family: 'Sukhumvit Set', 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+}
+
+.learning-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.top-bar {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    color: #6a00ff; /* FutureSkill logo color */
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 20px;
+}
+
+.back-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+/* ------------------- MAIN LAYOUT & VIDEO ------------------- */
+.main-content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.video-section {
+    flex: 1; /* ใช้พื้นที่ที่เหลือ */
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.video-player {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.video-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.lesson-header h1 {
+    font-size: 2em;
+    color: #333;
+    margin: 20px 0;
+}
+
+.progress-info {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+.dark-blue {
+    background-color: #004d99; /* Checking Membership in a Dictionary */
+}
+
+.light-blue {
+    background-color: #00bfff; /* Other Functions */
+}
+
+/* ------------------- SIDEBAR ------------------- */
+.sidebar {
+    width: 350px; /* กำหนดความกว้างคงที่หรือใช้ flex-basis */
+    min-width: 300px;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.course-name {
+    font-size: 1.1em;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* Progress Donut Styles (ใช้ CSS Conic Gradient และ Border) */
+.progress-ring-wrapper {
+    text-align: center;
+    padding: 15px 0 25px 0;
+}
+
+.progress-ring {
+    --progress-value: 80; /* กำหนดค่าเริ่มต้น 4/5 = 80% */
+    --ring-size: 100px;
+    --ring-thickness: 8px;
+    --main-color: #8a2be2;
+    --bg-color: #3d3d5f;
+    
+    width: var(--ring-size);
+    height: var(--ring-size);
+    border-radius: 50%;
+    margin: 10px auto;
+    
+    /* สร้างโดนัทด้วย Conic Gradient */
+    background: radial-gradient(closest-side, #1a1a2e calc(100% - var(--ring-thickness)), transparent calc(100% - var(--ring-thickness) + 1px) 0),
+                conic-gradient(var(--main-color) calc(var(--progress-value) * 1%), var(--bg-color) 0);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.progress-text {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.progress-detail {
+    font-size: 0.85em;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.actions-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.action-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.download-doc {
+    background-color: #8a2be2; /* สีม่วง */
+    color: white;
+}
+.download-doc:hover { background-color: #6a00cc; }
+
+.download-cert {
+    background-color: #3d3d5f; /* สีเข้มรอง */
+    color: white;
+}
+.download-cert:hover { background-color: #4a4a70; }
+
+
+/* ------------------- LESSON LIST ------------------- */
+.lesson-list {
+    list-style: none;
+    padding: 0;
+}
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid #3d3d5f;
+    cursor: pointer;
+}
+
+.lesson-item:hover {
+    background-color: #2a2a40;
+}
+
+.lesson-check {
+    width: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #4CAF50; /* สีเขียวสำหรับบทเรียนที่เสร็จแล้ว */
+    margin-right: 10px;
+}
+
+.lesson-item.completed .lesson-check {
+    content: '✔'; /* ไม่สามารถใช้ content กับ span ได้ตรง ๆ แต่จะใช้ JS จัดการ */
+}
+
+.lesson-item.active {
+    background-color: #3d3d5f;
+    border-radius: 5px;
+}
+
+.lesson-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.lesson-details .title {
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.lesson-details .duration {
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 1000px) {
+    .main-content {
+        flex-direction: column; /* เปลี่ยนให้วางซ้อนกันในหน้าจอขนาดเล็ก */
+    }
+
+    .video-section {
+        padding: 10px;
+        flex: 1 100%;
+    }
+    
+    .sidebar {
+        order: -1; /* ย้าย sidebar ขึ้นไปอยู่ด้านบน (เหนือวิดีโอ) */
+        width: 100%;
+        min-width: auto;
+    }
+}

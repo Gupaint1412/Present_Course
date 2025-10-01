@@ -1,0 +1,293 @@
+/* 1. Reset และ Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 2. Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #007bff; /* สีน้ำเงินสว่าง */
+    margin-right: 20px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    font-size: 0.95rem;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-btn, .profile-btn, .profile-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #555;
+    position: relative;
+    padding: 5px;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FF4500; /* สีนีออนชมพู-แดง */
+    color: white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.menu-toggle-btn {
+    display: none; /* ซ่อนปุ่ม Hamburger บน Desktop */
+}
+
+/* 3. Page Header/Title */
+.page-header {
+    padding: 20px 0;
+}
+
+.breadcrumb {
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* 4. Course Card Grid Layout */
+.course-list {
+    display: grid;
+    /* ใช้ CSS Grid: กำหนดให้มีอย่างน้อย 4 คอลัมน์บน Desktop, ปรับอัตโนมัติตามขนาดจอ */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+/* 5. Course Card Styling */
+.course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    height: 150px; /* ความสูงของส่วนรูปภาพ */
+    overflow: hidden;
+    position: relative;
+}
+
+.instructor-image {
+    width: 100%;
+    height: 100%;
+    /* จำลองรูปภาพพื้นหลังสี */
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1; /* ให้เนื้อหาขยายเต็มที่ในความสูง */
+    display: flex;
+    flex-direction: column;
+}
+
+.course-category {
+    color: #7B68EE; /* สีม่วงอ่อน */
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.course-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    flex-grow: 1; /* ชื่อคอร์สขยายเพื่อดันส่วนราคาและปุ่มลงมา */
+    font-weight: 600;
+}
+
+.instructor {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.course-meta {
+    display: flex;
+    gap: 15px;
+    color: #999;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+.course-price {
+    margin-bottom: 15px;
+}
+
+.current-price {
+    font-size: 1.3rem;
+    color: #FF4500; /* สีส้ม */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.buy-button {
+    background-color: #9370DB; /* สีม่วง */
+    color: white;
+    border: 1px solid #9370DB;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.buy-button:hover {
+    background-color: #7B68EE;
+}
+
+
+/* 6. Responsive Design (Media Queries) */
+
+/* สำหรับ Tablet (น้อยกว่า 1024px) */
+@media (max-width: 1024px) {
+    .main-nav {
+        margin-right: 10px;
+    }
+    .course-list {
+        /* ลดเหลือ 3 คอลัมน์ */
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+/* สำหรับ Mobile (น้อยกว่า 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+    }
+
+    .navbar-left {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .main-nav {
+        /* ซ่อนเมนูหลักบนมือถือและจะแสดงเมื่อเมนูถูกเปิด */
+        display: none; 
+        width: 100%; 
+        order: 3; /* จัดให้อยู่ด้านล่าง */
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        border-top: 1px solid #eee;
+        padding: 10px 0;
+    }
+
+    .main-nav li a {
+        padding: 10px 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-actions {
+        width: 100%; /* จัด Actions ให้อยู่ด้านล่าง Logo บนมือถือ*/
+        justify-content: flex-end;
+        padding-top: 5px;
+        order: 2; /* จัดให้อยู่ระหว่าง Logo กับ Nav */
+    }
+
+    .menu-toggle-btn {
+        display: block; /* แสดงปุ่ม Hamburger */
+    }
+    
+    /* เมื่อเมนูถูกเปิดด้วย JavaScript */
+    .navbar.menu-open .main-nav {
+        display: block; 
+    }
+
+    .course-list {
+        /* ลดเหลือ 2 คอลัมน์ */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+/* สำหรับ Mobile Screen เล็กมากๆ (น้อยกว่า 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .course-list {
+        /* แสดงเป็น 1 คอลัมน์ */
+        grid-template-columns: 1fr;
+    }
+    /* อาจจะซ่อนไอคอนบางอย่างเพื่อประหยัดพื้นที่บนมือถือ */
+    .search-btn, .cart-btn {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,520 @@
+:root {
+    --primary-color: #5d35b9; /* สีม่วงเข้มหลัก */
+    --secondary-color: #f7f7f7; /* พื้นหลังสีอ่อน */
+    --text-color: #333;
+    --light-gray: #e0e0e0;
+    --progress-bg: #e6e6e6;
+    --progress-fill: #8c60d8;
+    --border-color: #f0f0f0;
+    --hover-color: #6a40c1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* ใช้ Sarabun ตามฟอนต์ที่พบได้บ่อยในเว็บไซต์ไทย */
+    font-family: 'Sarabun', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: var(--text-color);
+    line-height: 1.5;
+    font-size: 16px;
+    padding-top: 50px; /* เว้นพื้นที่สำหรับ header-bar */
+}
+
+/* --- Top Header Bar (FutureSkill Logo & Lang) --- */
+.header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.lang-selector .flag-icon {
+    width: 24px;
+    height: 16px;
+    /* Placeholder for the flag image */
+    background-color: #a0a0a0;
+    border-radius: 2px;
+}
+
+.lang-selector .lang-text:last-child {
+    font-weight: 600;
+}
+
+
+/* --- Main Container --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Course Header Section --- */
+.course-header {
+    margin-bottom: 20px;
+}
+
+.back-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.course-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.top-content-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* เพื่อ Responsive */
+}
+
+.left-col {
+    flex: 1 1 350px; /* ส่วนข้อมูลคอร์ส */
+    padding-right: 20px;
+}
+
+.right-col {
+    flex: 2 1 600px; /* ส่วนวิดีโอ */
+}
+
+/* Instructor Info */
+.instructor-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-image: url('in_course.png'); /* ใช้ภาพในตัวอย่างเป็น placeholder */
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: var(--light-gray);
+    margin-right: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.enrollment {
+    margin-left: 10px;
+    color: #999;
+}
+
+/* Progress Section */
+.progress-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.progress-section p:first-child {
+    margin: 0;
+    color: #999;
+}
+
+.progress-bar-container {
+    flex-grow: 1;
+    height: 6px;
+    background-color: var(--progress-bg);
+    border-radius: 3px;
+    position: relative;
+    max-width: 200px; 
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--progress-fill);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+    width: 40%; /* Initial width set by JS, but defined here for visual clarity */
+}
+
+.progress-percent {
+    font-weight: 700;
+    color: var(--progress-fill);
+    min-width: 30px; 
+}
+
+.current-episode {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-left: 10px !important;
+}
+
+.continue-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.2s;
+    white-space: nowrap; 
+    font-size: 0.9rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.continue-button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Video Player */
+.video-player {
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.video-placeholder {
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('in_course.png'); 
+    background-size: cover;
+    background-position: center 30%;
+}
+
+.video-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.video-caption {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+.youtube-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #ff0000;
+    color: white;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+/* --- Tabs Navigation --- */
+.tabs-navigation {
+    display: flex;
+    border-bottom: 2px solid var(--border-color);
+    margin-top: 20px;
+    overflow-x: auto; 
+    white-space: nowrap;
+}
+
+.tab-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-bottom-color 0.2s;
+    font-weight: 600;
+    gap: 5px;
+}
+
+.tab-item:hover {
+    color: var(--primary-color);
+}
+
+.tab-item.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.tab-item svg {
+    stroke: currentColor;
+}
+
+/* --- Tab Content Structure --- */
+.tab-content-wrapper {
+    padding: 20px 0;
+}
+
+.tab-content {
+    display: none;
+    flex-wrap: wrap; 
+    gap: 30px;
+}
+
+.tab-content.active {
+    display: flex;
+}
+
+.lesson-main-area {
+    flex: 3 1 60%; /* ส่วนบทเรียน */
+    min-width: 300px;
+}
+
+.sidebar-area {
+    flex: 1 1 30%; /* ส่วนดาวน์โหลด */
+    min-width: 250px;
+}
+
+/* Lesson Details */
+.lesson-main-area h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.lesson-count {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+/* Lesson List */
+.lesson-list {
+    border-top: 1px solid var(--border-color);
+}
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.lesson-item:hover {
+    background-color: var(--secondary-color);
+}
+
+.lesson-item.current {
+    background-color: var(--secondary-color);
+    border-left: 3px solid var(--progress-fill);
+    padding-left: 7px;
+}
+
+.dropdown-icon {
+    margin-right: 15px;
+    transform: rotate(0deg); /* จำลอง icon ลูกศรชี้ลง */
+}
+
+.lesson-details {
+    flex-grow: 1;
+}
+
+.lesson-title {
+    font-weight: 600;
+    margin: 0;
+}
+
+.sub-detail {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.duration {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666;
+}
+
+/* Sidebar Info Box */
+.sidebar-info-box {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    align-self: flex-start; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.sidebar-info-box svg {
+    margin-bottom: 10px;
+}
+
+.box-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.box-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.download-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.download-button:hover {
+    background-color: var(--hover-color);
+}
+
+/* --- Activate Windows Mockup --- */
+#activate-windows-mockup {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top-left-radius: 5px;
+    font-size: 0.8rem;
+    color: #555;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#activate-windows-mockup a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+    .top-content-wrapper {
+        flex-direction: column;
+    }
+
+    .left-col {
+        padding-right: 0;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 20px;
+        order: 2; /* ย้ายข้อมูลความคืบหน้ามาอยู่หลังวิดีโอในหน้าจอขนาดกลาง */
+    }
+
+    .right-col {
+        order: 1; /* ย้ายวิดีโอไปอยู่ด้านบนสุด */
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .course-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .progress-section {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .progress-section p:first-child, .progress-percent {
+        flex-basis: 50%;
+        margin-bottom: 5px;
+    }
+    
+    .current-episode {
+        flex-basis: 100%;
+        order: 3;
+        margin-left: 0 !important;
+    }
+
+    .progress-bar-container {
+        flex-basis: 100%;
+        max-width: none;
+        order: 4;
+        margin: 5px 0 15px 0;
+    }
+
+    .continue-button {
+        order: 5;
+        width: 100%;
+    }
+
+    .tab-content.active {
+        flex-direction: column;
+    }
+    
+    .sidebar-area {
+        order: -1; 
+        margin-bottom: 20px;
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    .lesson-main-area {
+        width: 100%;
+    }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureSkill Course Mockup</title>
+    <link rel="stylesheet" href="in_couse.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-bar">
+        <div class="logo">FutureSkill</div>
+        <div class="lang-selector">
+            <img src="thai_flag_placeholder.png" alt="Thai Flag" class="flag-icon">
+            <span class="lang-text">TH</span>
+            <span class="lang-text">ไทย</span>
+        </div>
+    </div>
+    
+    <div class="container">
+        <header class="course-header">
+            <a href="course.html" class="back-link">← กลับ</a>
+            <h1>UpSkill Python Programming เส้นทางสู่ Developer</h1>
+            
+            <div class="top-content-wrapper">
+                <div class="left-col">
+                    <div class="instructor-info">
+                        <div class="avatar">
+                            </div>
+                        <span>อ. จิรภัทร เอกพลกุล</span>
+                        <span class="enrollment">| 16844 ผู้เรียน</span>
+                    </div>
+                    <div class="progress-section">
+                        <p>ความคืบหน้า</p>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="course-progress-bar"></div>
+                        </div>
+                        <span class="progress-percent" id="progress-percent">40%</span>
+                        <p class="current-episode">Episode 5</p>
+                        <a href="learn.html"><button class="continue-button">เรียนต่อ</button></a>
+                    </div>
+                </div>
+
+                <div class="right-col">
+                    <div class="video-player">
+                        <div class="video-placeholder">
+                            <span class="video-title">Python พื้นฐาน</span>
+                            <div class="video-overlay">
+                                <p class="video-caption">บทเรียนนี้เป็นพื้นฐาน Python</p>
+                                <div class="youtube-label">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42A2.78 2.78 0 0 0 20.21 4.09C18.57 3.6 12 3.6 12 3.6s-6.57 0-8.21.49A2.78 2.78 0 0 0 1.46 6.42C.97 8.06.97 12 .97 12s0 3.94.49 5.58a2.78 2.78 0 0 0 2.33 2.33c1.64.49 8.21.49 8.21.49s6.57 0 8.21-.49a2.78 2.78 0 0 0 2.33-2.33c.49-1.64.49-5.58.49-5.58s0-3.94-.49-5.58z"></path><path d="M10 15l5-3-5-3z" fill="white"></path></svg>
+                                    <span>YouTube</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="course-content-main">
+            <div class="tabs-navigation">
+                <div class="tab-item active" data-tab="lessons">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l10 5l-10 5l-10-5l10-5z"></path><path d="M2 12l10 5l10-5"></path><path d="M2 17l10 5l10-5"></path></svg>
+                    <span>รายละเอียดบทเรียน</span>
+                </div>
+                <div class="tab-item" data-tab="quiz">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M16 16l-4-4l-4 4"></path></svg>
+                    <span>ตัวอย่างข้อสอบ</span>
+                </div>
+                <div class="tab-item" data-tab="certificate">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                    <span>แบบทดสอบ</span>
+                </div>
+                <div class="tab-item" data-tab="support">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12" y2="17"></line></svg>
+                    <span>สอบถามผู้สอน</span>
+                </div>
+            </div>
+
+            <div class="tab-content-wrapper">
+                <div class="tab-content active" id="lessons">
+                    <div class="lesson-main-area">
+                        <h2>บทเรียนและลำดับการดูของคุณ</h2>
+                        <p class="subtitle">รายละเอียดบทเรียน</p>
+                        <p class="lesson-count">13 บทเรียน · ความยาวรวมทั้งหมด 2 ชั่วโมง 55 นาที</p>
+
+                        <div class="lesson-list">
+                            <div class="lesson-item">
+                                <span class="dropdown-icon">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                                <div class="lesson-details">
+                                    <p class="lesson-title">Introduction to Python</p>
+                                    <span class="sub-detail">1 บทเรียน</span>
+                                </div>
+                                <span class="duration">10 นาที</span>
+                            </div>
+                            <div class="lesson-item">
+                                <span class="dropdown-icon">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                                <div class="lesson-details">
+                                    <p class="lesson-title">Applications of Python and Python Career Paths</p>
+                                    <span class="sub-detail">1 บทเรียน</span>
+                                </div>
+                                <span class="duration">7 นาที</span>
+                            </div>
+                            <div class="lesson-item current">
+                                <span class="dropdown-icon">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                                <div class="lesson-details">
+                                    <p class="lesson-title">Python Structure & Syntax</p>
+                                    <span class="sub-detail">1 บทเรียน</span>
+                                </div>
+                                <span class="duration">18 นาที</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-area">
+                        <div class="sidebar-info-box">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="#8c60d8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            <p class="box-title">ดาวน์โหลดเอกสารของหลักสูตร</p>
+                            <p class="box-text">คุณสามารถดาวน์โหลดเอกสารประกอบการเรียนได้ เพื่อให้เรียนได้อย่างราบรื่น</p>
+                            <button class="download-button">ดาวน์โหลดเอกสารประกอบ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="quiz">
+                    <p>เนื้อหาสำหรับแท็บตัวอย่างข้อสอบ...</p>
+                </div>
+                <div class="tab-content" id="certificate">
+                    <p>เนื้อหาสำหรับแท็บแบบทดสอบ...</p>
+                </div>
+                <div class="tab-content" id="support">
+                    <p>เนื้อหาสำหรับแท็บสอบถามผู้สอน...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- <div id="activate-windows-mockup">
+        Activate Windows
+        <a href="#">Go to Settings to activate Windows.</a>
+    </div> -->
+
+    <script src="in_couse.js"></script>
+</body>
+</html>
