@@ -6,20 +6,27 @@
   <title>Login Page</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+     
     }
 
     body {
+      font-family: 'Kanit', sans-serif;
+      font-weight: 400;
+      font-style: normal;
       min-height: 100vh;
       background: linear-gradient(to top, #dff1ff, #b3d7f9);
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center;      
     }
 
     .wrapper {
@@ -159,13 +166,14 @@
       color: #1877f2; /* Facebook Blue */
     }
 
-    .social-login button.apple:hover i {
-      color: #000; /* Apple Black */
+    .apple:hover{
+      background-color: #000; /* Apple Black */
     }
 
     .apple {
       background-color: #02014e !important;
       color: #fff !important;
+      font-weight: 600;
     }
     .apple img {
       width: 25px;
@@ -189,7 +197,7 @@
   <div class="wrapper">
     <!-- Logo top -->
     <div class="logo-top">
-      <i class="fa-solid fa-bolt"></i> Ebolt
+      <i class="fa-solid fa-globe"></i> TMS
     </div>
 
     <div class="container">
