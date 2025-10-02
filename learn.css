@@ -257,3 +257,12 @@ body {
         min-width: auto;
     }
 }
+
+@media (max-width: 425px) {
+    .course-header{
+        height: 350px;
+    }
+    #navigater_bar{
+        display: none;
+    }
+}

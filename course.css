@@ -1,0 +1,226 @@
+body {
+      font-family: 'Kanit', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: #5d35b9;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding-right: 3rem;
+    }
+
+    .logo-top i {
+      background: #5d35b9;
+      color: #fff;
+      padding: 5px;
+      border-radius: 6px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #5d35b9;
+      font-weight: 400;
+      text-decoration: none;
+    }
+
+    a{
+      text-decoration: none;
+      color: black;
+    }
+
+    a:hover {
+      color: #2b0ecf;
+      text-decoration: underline;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      padding: 6px 35px 6px 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .search-box i {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #888;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 18px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .icons span {
+      position: relative;
+    }
+
+    .icons .badge {
+      position: absolute;
+      top: -5px;
+      right: -8px;
+      background: red;
+      color: white;
+      font-size: 10px;
+      padding: 2px 5px;
+      border-radius: 50%;
+    }
+
+    /* ===== Container & Courses ===== */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .course-content {
+      padding: 15px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 0 8px;
+    }
+
+    .course-teacher {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 5px;
+      margin-top:5px;
+    }
+
+    .course-meta {
+      font-size: 13px;
+      color: #999;
+      margin-bottom: 5px;
+      margin-top: 5px
+    }
+
+    .course-price {
+      margin-top: auto;
+    }
+
+    .course-price .sale {
+      font-size: 18px;
+      color: #c2185b;
+      font-weight: bold;
+    }
+
+    .course-price .original {
+      font-size: 14px;
+      color: #999;
+      text-decoration: line-through;
+      margin-left: 5px;
+    }
+
+    .btn-buy {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      padding: 10px;
+      background: #5d35b9;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn-buy:hover {
+      background: #6a40c1;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .nav {
+        flex: 1 1 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .search-box {
+        flex: 1 1 100%;
+      }
+    }
+   

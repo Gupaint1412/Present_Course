@@ -7,6 +7,7 @@
     --progress-fill: #8c60d8;
     --border-color: #f0f0f0;
     --hover-color: #6a40c1;
+    --pass-color: #019101;
 }
 
 * {
@@ -148,7 +149,7 @@ body {
     color: #999;
 }
 
-.progress-bar-container {
+.progress-bar1-container {
     flex-grow: 1;
     height: 6px;
     background-color: var(--progress-bg);
@@ -165,7 +166,7 @@ body {
     max-width: 101px; 
 }
 
-.progress-bar {
+.progress-bar1 {
     height: 100%;
     background-color: var(--progress-fill);
     border-radius: 3px;
@@ -366,6 +367,14 @@ body {
     background-color: var(--secondary-color);
     border-left: 3px solid var(--progress-fill);
     padding-left: 7px;
+    margin-bottom: 5px;
+}
+
+.lesson-item.pass {
+    background-color: var(--secondary-color);
+    border-left: 3px solid var(--pass-color);
+    padding-left: 7px;
+    margin-bottom: 5px;
 }
 
 .dropdown-icon {
@@ -453,6 +462,9 @@ body {
     text-decoration: none;
     margin-left: 5px;
 }
+#navigater_bar{
+        display: flex;
+    }
 
 /* --- Responsive Design --- */
 @media (max-width: 1024px) {
@@ -470,6 +482,12 @@ body {
     .right-col {
         order: 1; /* ย้ายวิดีโอไปอยู่ด้านบนสุด */
         flex: 1 1 100%;
+    }
+    .course-content-main{
+        margin-top:12rem;
+    }
+    #navigater_bar{
+        display: flex;
     }
 }
 
@@ -523,5 +541,20 @@ body {
     
     .lesson-main-area {
         width: 100%;
+    }
+    .course-content-main{
+        margin-top:0;
+    }
+    #navigater_bar{
+        display: flex;
+    }
+}
+
+@media (max-width: 425px) {
+    .course-header{
+        height: 350px;
+    }
+    #navigater_bar{
+        display: none;
     }
 }
