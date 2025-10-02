@@ -65,6 +65,14 @@
       color: #2b0ecf;
       text-decoration: underline;
     }
+    .back-link {
+        color: #5d35b9;
+        text-decoration: none;
+        font-size: 1rem;
+        display: inline-block;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
     </style>
 </head>
 <body>
@@ -89,7 +97,7 @@
             <a href="login.html"><i class="fa-solid fa-power-off" style="color: tomato;padding-right: .25rem;"></i>ออกจากระบบ</a>
             </nav>     
         </header>
-        <div style="margin-left: 2rem;margin-top: 1.5rem;"> <a href="login.html"> 1.login </a> / <a href="course.html"> 2.คอร์สทั้งหมด </a> / <a href="in_couse.html">3.คอร์สของฉัน </a> / <a href="learn.html"><u> 4.ความคืบหน้าคอร์ส </u></a> </div>
+        <div style="margin-left: 2rem;margin-top: 1.5rem;"> <a href="in_couse.html" class="back-link" style="padding-right:2rem"> <i class="fa-solid fa-caret-left"></i> กลับ</a> <a href="login.html"> 1.login </a> / <a href="course.html"> 2.คอร์สทั้งหมด </a> / <a href="in_couse.html">3.คอร์สของฉัน </a> / <a href="learn.html"><u> 4.ความคืบหน้าคอร์ส </u></a> </div>
         <main class="main-content">
             
             <div class="video-section">
@@ -115,37 +123,37 @@
 
                 <div class="actions-section">
                     <button class="action-btn download-doc">
-                        <span class="thai-text">ดาวน์โหลดเอกสารประกอบการเรียน</span>
+                        <span class="thai-text"><i class="fa-solid fa-file" style="padding-right: .25rem;"></i>เอกสารประกอบการเรียน</span>
                     </button>
                     <button class="action-btn download-cert">
-                        <span class="thai-text">รับใบรับรอง</span>
+                        <span class="thai-text"><i class="fa-solid fa-certificate" style="padding-right: .25rem;"></i>รับใบรับรอง</span>
                     </button>
                 </div>
 
                 <ul class="lesson-list" id="lesson-list">
                     <li class="lesson-item completed">
-                        <span class="lesson-check">✔</span>
+                        <span class="lesson-check"><i class="fa-regular fa-circle-check"></i></span>
                         <div class="lesson-details">
                             <span class="title">1. ความรู้และทักษะด้านวิทยาศาสตร์การกีฬา</span>
                             <span class="duration">30:00 นาที | 1 บทเรียน</span>
                         </div>
                     </li>
                     <li class="lesson-item completed">
-                        <span class="lesson-check">✔</span>
+                        <span class="lesson-check"><i class="fa-regular fa-circle-check"></i></span>
                         <div class="lesson-details">
                             <span class="title">2. แนวทางการพัฒนานักกีฬาระยะยาว</span>
                             <span class="duration">22:00 นาที | 1 บทเรียน</span>
                         </div>
                     </li>
                     <li class="lesson-item completed">
-                        <span class="lesson-check">✔</span>
+                        <span class="lesson-check"><i class="fa-regular fa-circle-check"></i></span>
                         <div class="lesson-details">
                             <span class="title">3. การพัฒนาศักยภาพทางสมอง</span>
                             <span class="duration">40:00 นาที | 1 บทเรียน</span>
                         </div>
                     </li>
                     <li class="lesson-item completed">
-                        <span class="lesson-check">✔</span>
+                        <span class="lesson-check"><i class="fa-regular fa-circle-check"></i></span>
                         <div class="lesson-details">
                             <span class="title">4. การปฐมพยาบาลเบื้องต้น</span>
                             <span class="duration">30:00 นาที | 1 บทเรียน</span>

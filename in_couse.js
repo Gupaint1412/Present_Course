@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- 2. Initial Progress Setup (40%) ---
-    const initialProgress = 40;
+    const initialProgress = 80;
     const progressBar = document.getElementById('course-progress-bar');
     const progressPercentText = document.getElementById('progress-percent');
 
