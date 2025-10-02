@@ -3,41 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FutureSkill Course Mockup</title>
+    <title>TMS</title>
     <link rel="stylesheet" href="in_couse.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        a{
+            text-decoration: none;
+            color:black
+        }
+        a:hover {
+      color: #2b0ecf;
+      text-decoration: underline;
+    }
+    </style>
 </head>
 <body>
     <div class="header-bar">
-        <div class="logo">FutureSkill</div>
+        <div class="logo-top">
+            <i class="fa-solid fa-person-running"></i> ระบบฝึกอบรมกรมพลศึกษา (TMS)
+        </div> 
         <div class="lang-selector">
-            <img src="thai_flag_placeholder.png" alt="Thai Flag" class="flag-icon">
-            <span class="lang-text">TH</span>
-            <span class="lang-text">ไทย</span>
+            <a href="login.html">หน้าหลัก</a>
+            <a href="course.html">คอร์สทั้งหมด</a>
+            <a href="in_couse.html">คอร์สของฉัน</a>
+            <a href="#">ข่าวสาร</a>
+            <a href="#">ติดต่อเรา</a>
+            <a href="login.html"><i class="fa-solid fa-power-off" style="color: tomato;padding-right: .25rem;"></i>ออกจากระบบ</a>
         </div>
     </div>
     
     <div class="container">
         <header class="course-header">
-            <a href="course.html" class="back-link">← กลับ</a>
+           <div style="display: flex;"> <a href="course.html" class="back-link" style="padding-right:2rem"> <i class="fa-solid fa-caret-left"></i> กลับ</a><div style="margin-bottom: 1rem;"> <a href="login.html"> 1.login </a> / <a href="course.html"> 2.คอร์สทั้งหมด </a> / <a href="in_couse.html"><u>3.คอร์สของฉัน </u></a> / <a href="learn.html"> 4.ความคืบหน้าคอร์ส </a> </div></div>
             <h1>E-learning หลักสูตรอาสาสมัครกีฬาและผู้นำการออกกำลังกาย รุ่นที่ 1</h1>
             
             <div class="top-content-wrapper">
                 <div class="left-col">
                     <div class="instructor-info">
-                        <div class="avatar">
-                            </div>
-                        <span>อ. ฐาปณัฐ ผลสุข</span>
-                        <span class="enrollment">| 16844 ผู้เรียน</span>
+                        <!-- <div class="avatar"></div> -->
+                        <span>อ.ณัฐปฐา สุขผล</span>
+                        <span class="enrollment">| 986 ผู้เรียน</span>
                     </div>
                     <div class="progress-section">
-                        <p>ความคืบหน้า</p>
+                        <p>ภาคทฤษฎี</p>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="course-progress-bar"></div>
                         </div>
                         <span class="progress-percent" id="progress-percent">40%</span>
                         <p class="current-episode">Episode 5</p>
                         <a href="learn.html"><button class="continue-button">เรียนต่อ</button></a>
+                    </div>
+                    <div class="progress-section">
+                        <p>ภาคปฏิบัติ</p>
+                        <div class="progress-bar-container2" >
+                            <div class="progress-bar2" id="course-progress-bar"></div>
+                        </div>
+                        <span class="progress-percent2" id="progress-percent">0%</span>                        
                     </div>
                 </div>
 
@@ -65,16 +91,19 @@
                     <span>รายละเอียดบทเรียน</span>
                 </div>
                 <div class="tab-item" data-tab="quiz">
-                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M16 16l-4-4l-4 4"></path></svg>
-                    <span>ตัวอย่างข้อสอบ</span>
+                    <!-- <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M16 16l-4-4l-4 4"></path></svg> -->
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.<path d="M352.5 32C383.4 32 408.5 57.1 408.5 88C408.5 118.9 383.4 144 352.5 144C321.6 144 296.5 118.9 296.5 88C296.5 57.1 321.6 32 352.5 32zM219.6 240C216.3 240 213.4 242 212.2 245L190.2 299.9C183.6 316.3 165 324.3 148.6 317.7C132.2 311.1 124.2 292.5 130.8 276.1L152.7 221.2C163.7 193.9 190.1 176 219.6 176L316.9 176C345.4 176 371.7 191.1 386 215.7L418.8 272L480.4 272C498.1 272 512.4 286.3 512.4 304C512.4 321.7 498.1 336 480.4 336L418.8 336C396 336 375 323.9 363.5 304.2L353.5 287.1L332.8 357.5L408.2 380.1C435.9 388.4 450 419.1 438.3 445.6L381.7 573C374.5 589.2 355.6 596.4 339.5 589.2C323.4 582 316.1 563.1 323.3 547L372.5 436.2L276.6 407.4C243.9 397.6 224.6 363.7 232.9 330.6L255.6 240L219.7 240zM211.6 421C224.9 435.9 242.3 447.3 262.8 453.4L267.5 454.8L260.6 474.1C254.8 490.4 244.6 504.9 231.3 515.9L148.9 583.8C135.3 595 115.1 593.1 103.9 579.5C92.7 565.9 94.6 545.7 108.2 534.5L190.6 466.6C195.1 462.9 198.4 458.1 200.4 452.7L211.6 421z"/></svg> -->
+                     <i class="fa-solid fa-person-running"></i>
+                    <span>ภาคปฏิบัติ</span>
                 </div>
                 <div class="tab-item" data-tab="certificate">
                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
                     <span>แบบทดสอบ</span>
                 </div>
                 <div class="tab-item" data-tab="support">
-                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12" y2="17"></line></svg>
-                    <span>สอบถามผู้สอน</span>
+                    <!-- <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12" y2="17"></line></svg> -->
+                     <i class="fa-solid fa-bug-slash"></i>
+                    <span>แจ้งปัญหาการใช้งาน</span>
                 </div>
             </div>
 
@@ -83,7 +112,7 @@
                     <div class="lesson-main-area">
                         <h2>บทเรียนและลำดับการดูของคุณ</h2>
                         <p class="subtitle">รายละเอียดบทเรียน</p>
-                        <p class="lesson-count">5 บทเรียน · ความยาวรวมทั้งหมด 47 นาที</p>
+                        <p class="lesson-count">5 บทเรียน · ความยาวรวมทั้งหมด 126 นาที</p>
 
                         <div class="lesson-list">
                             <div class="lesson-item">
@@ -94,7 +123,7 @@
                                     <p class="lesson-title">ความรู้และทักษะด้านวิทยาศาสตร์การกีฬา</p>
                                     <span class="sub-detail">1 บทเรียน</span>
                                 </div>
-                                <span class="duration">10 นาที</span>
+                                <span class="duration">30 นาที</span>
                             </div>
                             <div class="lesson-item">
                                 <span class="dropdown-icon">
@@ -104,7 +133,7 @@
                                     <p class="lesson-title">แนวทางการพัฒนานักกีฬาระยะยาว</p>
                                     <span class="sub-detail">1 บทเรียน</span>
                                 </div>
-                                <span class="duration">12 นาที</span>
+                                <span class="duration">22 นาที</span>
                             </div>
                              <div class="lesson-item">
                                 <span class="dropdown-icon">
@@ -114,7 +143,7 @@
                                     <p class="lesson-title">การพัฒนาศักยภาพทางสมอง</p>
                                     <span class="sub-detail">1 บทเรียน</span>
                                 </div>
-                                <span class="duration">10 นาที</span>
+                                <span class="duration">40 นาที</span>
                             </div>
                             <div class="lesson-item">
                                 <span class="dropdown-icon">
@@ -124,7 +153,7 @@
                                     <p class="lesson-title">การปฐมพยาบาลเบื้องต้น</p>
                                     <span class="sub-detail">1 บทเรียน</span>
                                 </div>
-                                <span class="duration">10 นาที</span>
+                                <span class="duration">30 นาที</span>
                             </div>
                              <div class="lesson-item current">
                                 <span class="dropdown-icon">
@@ -134,23 +163,25 @@
                                     <p class="lesson-title">เด็กไทยจมน้ำ สาเหตุ และปัจจัยเสี่ยง</p>
                                     <span class="sub-detail">1 บทเรียน</span>
                                 </div>
-                                <span class="duration">2 นาที</span>
+                                <span class="duration">4 นาที</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="sidebar-area">
                         <div class="sidebar-info-box">
-                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="#8c60d8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                            <p class="box-title">ดาวน์โหลดเอกสารของหลักสูตร</p>
-                            <p class="box-text">คุณสามารถดาวน์โหลดเอกสารประกอบการเรียนได้ เพื่อให้เรียนได้อย่างราบรื่น</p>
+                            <div style="display: flex;"> 
+                                <svg viewBox="0 0 24 24" style="margin-right:.25rem" width="24" height="24" stroke="#8c60d8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                <p class="box-title">ดาวน์โหลดเอกสารของหลักสูตร</p>
+                            </div>
+                            <p class="box-text">คุณสามารถดาวน์โหลดเอกสารประกอบการเรียนได้ </p>
                             <button class="download-button">ดาวน์โหลดเอกสารประกอบ</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="tab-content" id="quiz">
-                    <p>เนื้อหาสำหรับแท็บตัวอย่างข้อสอบ...</p>
+                    <p><i class="fa-regular fa-calendar-check" style="padding-right:.25rem"></i>ตรวจสอบวัน เวลา และสถานที่ สำหรับหลักสูตรภาคปฏิบัติ ที่อีเมลของท่าน หลังจากจบหลักสูตรภาคทฤษฏี</p>
                 </div>
                 <div class="tab-content" id="certificate">
                     <p>เนื้อหาสำหรับแท็บแบบทดสอบ...</p>

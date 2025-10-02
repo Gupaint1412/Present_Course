@@ -3,34 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FutureSkill Learning Page Clone</title>
+    <title>TMS</title>
+     <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="learn.css">
+    <style>
+     header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: #5d35b9;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .logo-top i {
+      background: #5d35b9;
+      color: #fff;
+      padding: 5px;
+      border-radius: 6px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #5d35b9;
+      font-weight: 400;
+      text-decoration: none;
+    }
+
+    a{
+      text-decoration: none;
+      color: black;
+    }
+
+    a:hover {
+      color: #2b0ecf;
+      text-decoration: underline;
+    }
+    </style>
 </head>
 <body>
 
     <div class="learning-container">
 
         <header class="top-bar">
-             <img src="dpelogo.png" style="width:150px"  alt="DPE Logo">
+             <!-- <img src="dpelogo.png" style="width:150px"  alt="DPE Logo">
             <div class="logo">ระบบฝึกอบรมกรมพลศึกษา</div>
             <a href="in_couse.html" class="back-link">
                 <span class="thai-text">กลับไปหน้าบทเรียน</span>
-            </a>
+            </a> -->
+            <div class="logo-top">
+                <i class="fa-solid fa-person-running"></i> ระบบฝึกอบรมกรมพลศึกษา (TMS)
+            </div> 
+            <nav class="nav">
+            <a href="login.html">หน้าหลัก</a>
+            <a href="course.html">คอร์สทั้งหมด</a>
+            <a href="in_couse.html">คอร์สของฉัน</a>
+            <a href="#">ข่าวสาร</a>
+            <a href="#">ติดต่อเรา</a>
+            <a href="login.html"><i class="fa-solid fa-power-off" style="color: tomato;padding-right: .25rem;"></i>ออกจากระบบ</a>
+            </nav>     
         </header>
-
+        <div style="margin-left: 2rem;margin-top: 1.5rem;"> <a href="login.html"> 1.login </a> / <a href="course.html"> 2.คอร์สทั้งหมด </a> / <a href="in_couse.html">3.คอร์สของฉัน </a> / <a href="learn.html"><u> 4.ความคืบหน้าคอร์ส </u></a> </div>
         <main class="main-content">
+            
             <div class="video-section">
                 <div class="video-player">
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/XCSv24stT68?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
-                <div class="lesson-header">
-                    <!-- <h1>Exploring Tuple, Set, and Dictionary</h1>
-                    <div class="progress-info">
-                        <div class="circle dark-blue">Checking Membership in a Dictionary</div>
-                        <div class="circle light-blue">Other Functions</div>
-                    </div> -->
-                </div>
+                <!-- <div class="lesson-header">
+                    <h1>Exploring Tuple, Set, and Dictionary</h1>                    
+                </div> -->
             </div>
 
             <aside class="sidebar">
@@ -58,34 +127,34 @@
                         <span class="lesson-check">✔</span>
                         <div class="lesson-details">
                             <span class="title">1. ความรู้และทักษะด้านวิทยาศาสตร์การกีฬา</span>
-                            <span class="duration">10:00 นาที | 1 บทเรียน</span>
+                            <span class="duration">30:00 นาที | 1 บทเรียน</span>
                         </div>
                     </li>
                     <li class="lesson-item completed">
                         <span class="lesson-check">✔</span>
                         <div class="lesson-details">
                             <span class="title">2. แนวทางการพัฒนานักกีฬาระยะยาว</span>
-                            <span class="duration">12:00 นาที | 1 บทเรียน</span>
+                            <span class="duration">22:00 นาที | 1 บทเรียน</span>
                         </div>
                     </li>
                     <li class="lesson-item completed">
                         <span class="lesson-check">✔</span>
                         <div class="lesson-details">
                             <span class="title">3. การพัฒนาศักยภาพทางสมอง</span>
-                            <span class="duration">10:00 นาที | 1 บทเรียน</span>
+                            <span class="duration">40:00 นาที | 1 บทเรียน</span>
                         </div>
                     </li>
                     <li class="lesson-item completed">
                         <span class="lesson-check">✔</span>
                         <div class="lesson-details">
                             <span class="title">4. การปฐมพยาบาลเบื้องต้น</span>
-                            <span class="duration">10:00 นาที | 1 บทเรียน</span>
+                            <span class="duration">30:00 นาที | 1 บทเรียน</span>
                         </div>
                      <li class="lesson-item active">
                         <span class="lesson-check"></span>
                         <div class="lesson-details">
                             <span class="title">5. เด็กไทยจมน้ำ สาเหตุ และปัจจัยเสี่ยง</span>
-                            <span class="duration">2:00 นาที | 1 บทเรียน</span>
+                            <span class="duration">4:00 นาที | 1 บทเรียน</span>
                         </div>
                     </li>
                     </ul>

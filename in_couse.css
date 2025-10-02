@@ -13,8 +13,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    font-style: normal;
     /* ใช้ Sarabun ตามฟอนต์ที่พบได้บ่อยในเว็บไซต์ไทย */
-    font-family: 'Sarabun', sans-serif;
+    /* font-family: 'Sarabun', sans-serif; */
 }
 
 body {
@@ -42,31 +45,27 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: bold;
     color: var(--primary-color);
 }
-
+.logo-top i {
+      background: #5d35b9;
+      color: #fff;
+      padding: 5px;
+      border-radius: 6px;
+    }
 .lang-selector {
     display: flex;
     align-items: center;
-    gap: 5px;
-    font-size: 0.9rem;
-    color: #666;
+    gap: 20px;
+    font-size: 14px;
 }
 
-.lang-selector .flag-icon {
-    width: 24px;
-    height: 16px;
-    /* Placeholder for the flag image */
-    background-color: #a0a0a0;
-    border-radius: 2px;
+.lang-selector a {
+   color: var(--text-color);
+   text-decoration: none;
 }
-
-.lang-selector .lang-text:last-child {
-    font-weight: 600;
-}
-
 
 /* --- Main Container --- */
 .container {
@@ -157,6 +156,14 @@ body {
     position: relative;
     max-width: 200px; 
 }
+.progress-bar-container2 {
+    flex-grow: 1;
+    height: 6px;
+    background-color: var(--progress-bg);
+    border-radius: 3px;
+    position: relative;
+    max-width: 101px; 
+}
 
 .progress-bar {
     height: 100%;
@@ -211,7 +218,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('in_course.png'); 
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('coures1.png'); 
     background-size: cover;
     background-position: center 30%;
 }
