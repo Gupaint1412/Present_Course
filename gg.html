@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Profile</title>
+
+   <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="course.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.3.5/css/dataTables.bootstrap5.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="detail_user.css">
+    <style>
+    .nav-item a{
+      text-decoration: none ;
+    }
+    .container-fluid a{
+      text-decoration: none;
+    }
+    .container-fluid a:hover{
+      text-decoration: none;
+      color: #5d35b9;
+      font-weight: 400;
+    }
+   </style>
+</head>
+
+<body>
+
+<!-- ▬▬▬ HEADER (จาก course.html) ▬▬▬ -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <div class="logo-top">
+        <i class="fa-solid fa-person-running"></i> ระบบฝึกอบรมกรมพลศึกษา (TMS)
+      </div>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" style="justify-content:right;">
+      <ul class="navbar-nav">
+
+        <li class="nav-item"><a class="nav-link" href="#">หน้าหลัก</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">คอร์สทั้งหมด</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">คอร์สของฉัน</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <i class="fa-regular fa-circle-user"></i> ข้อมูลส่วนตัว
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">ดูประวัติส่วนตัว</a></li>
+            <li><a class="dropdown-item text-danger" href="#">ออกจากระบบ</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- ▬▬▬ Main Content (Full Width) ▬▬▬ -->
+<div class="content container py-4">
+
+  <!-- <h3 class="mb-3 fw-bold">Staff Detail</h3> -->
+<div id="navigater_bar" > <a href="in_couse.html" class="back-link" style="padding-right:2rem"> <i class="fa-solid fa-caret-left"></i> กลับ</a> <a href="login.html"> 1.login </a> / <a href="course.html"> 2.คอร์สทั้งหมด </a> / <a href="in_couse.html">3.คอร์สของฉัน </a> / <a href="learn.html"> 4.ความคืบหน้าคอร์ส  </a> / <a href="https://smartdpe2.dpe.go.th/smartdpe2/ipeshdtb/" target="_blank">5.DASHBOARD </a>  </div>
+  <!-- Profile Header -->
+  <div class="profile-header d-flex align-items-center p-3 mb-4" style="margin-top: 1rem;">
+    <img src="https://i.pravatar.cc/100" class="profile-img">
+    <div class="ms-3">
+      <h4 class="fw-bold mb-0">คุณมานะ  ปราถนาดี</h4>
+      <span class="text-secondary">วิทยากร ผู้ฝึกสอน</span>
+    </div>
+  </div>
+
+  <!-- Info Grid -->
+  <div class="row g-4">
+
+    <!-- Personal Info -->
+    <div class="col-lg-6">
+      <div class="info-card">
+        <h5>Personal Information</h5>
+        <hr>
+        <p><b>Gender:</b> Female</p>
+        <p><b>Date of birth:</b> 5 March 1996</p>
+        <p><b>Nationality:</b> Vietnam</p>
+        <p><b>Language:</b> Vietnamese, English</p>
+        <p><b>Marital status:</b> Single</p>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="col-lg-6">
+      <div class="info-card">
+        <h5>Education Information</h5>
+        <hr>
+        <p><b>Bachelor in Management Information System</b><br>2014-2018</p>
+        <p><b>Certificate of Graphic Design</b><br>2018-2019</p>
+        <p><b>Certificate of Graphic Design</b><br>2018-2019</p>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 1rem;">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          ข้อมูลปฏิบัติงาน
+        </div>
+        <div class="card-body">
+        <table class="table table-hover" id="example1">
+          <thead>
+            <tr>
+              <th >#</th>
+              <th >First</th>
+              <th >Last</th>
+              <th>Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th >3</th>
+              <td>John</td>
+              <td>Doe</td>
+              <td>@social</td>
+            </tr>
+             <tr>
+              <th >3</th>
+              <td>John</td>
+              <td>Doe</td>
+              <td>@social</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/2.3.5/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.3.5/js/dataTables.bootstrap5.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+  new DataTable('#example1', {
+    responsive: true,
+    language: {
+        // url: '//cdn.datatables.net/plug-ins/2.3.5/i18n/th.json',
+    },
+});
+</script>
+</body>
+</html>

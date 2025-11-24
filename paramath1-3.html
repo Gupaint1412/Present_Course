@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS</title>
+    <link rel="stylesheet" href="in_couse.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+       #navigater_bar a{
+            text-decoration: none;
+            color:black
+        }
+       #navigater_bar a:hover {
+            color: #2b0ecf;
+            text-decoration: underline;
+        }
+        .nav-item a{
+        text-decoration: none ;
+        }
+        .container-fluid a{
+        text-decoration: none;
+        }
+        .container-fluid a:hover{
+        text-decoration: none;
+        color: #5d35b9;
+        font-weight: 400;
+        }
+        .info-card {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.detail-text p {
+    margin: 8px 0;        /* เพิ่มระยะห่างระหว่างบรรทัด */
+    font-size: 18px;      /* ขนาดตัวอักษรดูดีขึ้น */
+    line-height: 1.6;     /* ทำให้พารากราฟโปร่ง */
+}
+ .radio-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+  }
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+  .status-box {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-right: 8px;
+}
+
+.green {
+    background-color: #4CAF50;
+}
+
+.red {
+    background-color: #E53935;
+}
+.blue {
+    background-color: #1E90FF;
+}
+    </style>
+</head>
+<body style="padding:0">
+    <!-- <div class="header-bar">
+        <div class="logo-top">
+            <i class="fa-solid fa-person-running"></i> ระบบฝึกอบรมกรมพลศึกษา (TMS)
+        </div> 
+        <div class="lang-selector">
+            <a href="login.html">หน้าหลัก</a>
+            <a href="course.html">คอร์สทั้งหมด</a>
+            <a href="in_couse.html">คอร์สของฉัน</a>
+            <a href="#">ข่าวสาร</a>
+            <a href="#">ติดต่อเรา</a>
+            <a href="login.html"><i class="fa-solid fa-power-off" style="color: tomato;padding-right: .25rem;"></i>ออกจากระบบ</a>
+        </div>
+    </div> -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="#"> 
+      <div class="logo-top">
+        <i class="fa-solid fa-person-running"></i> ระบบฝึกอบรมกรมพลศึกษา (TMS)
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" style="justify-content: end;padding-right: 2.3rem;">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="login.html">หน้าหลัก</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="course.html">คอร์สทั้งหมด</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="in_couse.html">คอร์สของฉัน</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-regular fa-circle-user" style="padding-right: .25rem;"></i>ข้อมูลส่วนตัว
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"><i class="fa-regular fa-user" style="padding-right: .25rem;"></i>นายเทคโน แอดมิน</a></li>
+            <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
+            <li><a class="dropdown-item" href="login.html"><i class="fa-solid fa-power-off" style="color: tomato;padding-right: .25rem;"></i>ออกจากระบบ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="content container py-4">
+
+  <!-- <h3 class="mb-3 fw-bold">Staff Detail</h3> -->
+<div id="navigater_bar" > <a href="paramath.html" class="back-link" style="padding-right:2rem"> <i class="fa-solid fa-caret-left"></i> กลับ</a></div>
+</div>
+    <div class="container">
+        <header class="course-header">
+     
+            <h1>รายงานผลการปฏิบัติงาน</h1>
+            
+            <div class="top-content-wrapper">
+                <div class="left-col">
+                    <div class="instructor-info">
+                        <!-- <div class="avatar"></div> -->
+                        <span>Running with the ball การเคลื่อนที่ไปกับบอลด้วยความเร็ว</span>
+                        <span class="enrollment">| จำนวนผู้เข้ารับการฝึก 30 คน</span>
+						<span class="text-secondary">&nbsp;&nbsp;<div class="status-box red">ยังไม่ตรวจ</div></span>
+                    </div>
+                   
+                  
+                </div>
+
+                
+            </div>
+        </header>
+
+        <main class="course-content-main">
+            <div class="tabs-navigation">
+                <div class="tab-item active" data-tab="lessons">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l10 5l-10 5l-10-5l10-5z"></path><path d="M2 12l10 5l10-5"></path><path d="M2 17l10 5l10-5"></path></svg>
+                    <span>รายละเอียดการปฏิบัติงาน</span>
+                </div>
+                
+               
+            </div>
+
+            <div class="tab-content-wrapper">
+                <div class="tab-content active" id="lessons">
+                    <div class="lesson-main-area">
+                        <h2>ชื่องาน : รายงานการปฏิบัติหน้าที่ผู้ฝึกสอนกีฬาฟุตบอล ครั้งที่ 3</h2>
+                        
+                        <div class="lesson-list ">
+                            <div class="lesson-item pass">
+                                <span class="dropdown-icon">
+                                    <!-- <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> -->
+                                   
+                                </span>
+                                <div class="lesson-details">
+                                    <div class="col-lg-15">
+                                       <div class="info-card">
+                                       <h5>รายละเอียด</h5>
+                                       <hr><font size = 4>
+		                               <b>ผู้อบรม :  </b> <font color=gray>นายปารเมศ ฟักพยูง</font><br>
+		                               <b>สถานที่ :  </b> <font color=gray>สนามฟุตบอลโรงเรียนชุมชนบ้านเชียงกลม จังหวัด อุดรธานี</font><br>
+		                               <b>เรื่อง :  </b> <font color=gray>Running with the ball การเคลื่อนที่ไปกับบอลด้วยความเร็ว</font><br>
+		                               <b>เวลาที่ใช้ฝึก :  </b> <font color=gray>2  ชั่วโมง</font><br>
+		                               <b>จำนวนผู้เข้าฝึก :  </b> <font color=gray>30 คน</font><br>
+									    <b>ระดับการนำไปใช้ :  </b> <font color=gray>จังหวัด</font><br>
+										<b>วันที่ปฏิบัติงาน :  </b> <font color=gray>วันที่ 22 พฤศจิกายน 2568</font><br>
+										<b>เวลา :  </b> <font color=gray>16.30 น. -18.30 น.</font>
+                                       </font>
+                             </div>
+                            </div>
+                                </div>
+                            </div>
+                             <div class="lesson-item pass">
+                                <span class="dropdown-icon">
+                                    <!-- <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> -->
+                                   
+                                </span>
+                                <div class="lesson-details">
+                                    <div class="col-lg-15">
+                                       <div class="info-card">
+                                       <h5>วัตถุประสงค์ในการฝึก</h5>
+                                       <hr><font size = 4>
+		                               <b></b> <font color=gray>1.เพื่อพัฒนาการเคลื่อนที่ไปกับบอลด้วยความเร็ว</font><br>
+		                               <b></b> <font color=gray>2.เพื่อพัฒนาการประสานงานระหว่างการเคลื่อนที่กับการมองภาพรวมในสนาม </font><br>
+		                               <b></b> <font color=gray>3.เพื่อพัฒนาความคล่องตัวและการควบคุมบอลขณะเคลื่อนที่เร็ว </font><br>
+		                             
+
+
+                                       </font>
+                             </div>
+                            </div>
+                                </div>
+                               
+                            </div>
+                            <div class="lesson-item pass">
+                                <span class="dropdown-icon">
+                                    <!-- <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> -->
+                                   
+                                </span>
+                                <div class="lesson-details">
+                                    <div class="col-lg-15">
+                                       <div class="info-card">
+                                       <h5>สื่อ/อุุปกรณ์</h5>
+                                       <hr><font size = 4>
+		                               <b></b> <font color=gray>1.ลูกฟุตบอล </font><br>
+		                               <b></b> <font color=gray>2.กรวย</font><br>
+		                               <b></b> <font color=gray>3.มาร์คเกอร์</font><br>
+		                              
+                                       </font>
+                             </div>
+                            </div>
+                                </div>
+                               
+                            </div>
+                       
+                           
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-area">
+                        <div class="sidebar-info-box">
+                            <div style="display: flex;"> 
+                                <svg viewBox="0 0 24 24" style="margin-right:.25rem" width="24" height="24" stroke="#8c60d8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                <p class="box-title">ผลการตรวจรายงานการปฏิบัติงาน</p>
+                            </div>                          
+                           <div class="radio-wrapper">
+						   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="radio" id="option1" name="group1" >
+  <label for="option1">ตรวจแล้ว</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="radio" id="option2" name="group1" checked>
+  <label for="option2">ยังไม่ตรวจ</label><br>
+</div>
+
+<br>
+   <button class="download-button" style="background-color: #2e7d32;">บันทึก</button>
+    </div>
+   
+    
+</div>
+                    </div>
+                </div>
+
+               
+                   <div class="lesson-main-area">
+                        <h2>กระบวนการจัดการเรียนรู้ 5 ขั้น &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					
+						<font color = green><b>เวลารวม :  120 นาที</b></font></h2>  
+                        
+                        <div class="lesson-list ">
+                            <div class="lesson-item pass">
+                                <span class="dropdown-icon">
+                                    <!-- <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> -->
+                                   
+                                </span>
+                                <table style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; font-size: 18px;">
+  <thead>
+   <tr>
+  <th style="border: 1px solid black; padding: 8px; text-align: center; vertical-align: middle;">
+    <b>กระบวนการจัดการเรียนรู้</b>
+  </th>
+  <th style="border: 1px solid black; padding: 8px; text-align: center; vertical-align: middle;">
+    <b>กิจกรรมการฝึก</b>
+  </th>
+  <th style="border: 1px solid black; padding: 8px; text-align: center; vertical-align: middle;">
+    <b>จำนวน นาที</b>
+  </th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
+        1. ขั้นเตรียม  (Preparation)      
+      </td>
+      <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
+        - สำรวจความพร้อมสนาม<br>
+        - จัดเตรียมอุปกรณ์ในการฝึกซ้อม<br>
+        - วางสถานีการฝึกซ้อมให้พร้อม<br>
+        - ตรวจสอบอาการบาดเจ็บของนักกีฬา<br>
+        - ยืดเหยียดกล้ามเนื้ออบอุ่นร่างกาย ให้พร้อมต่อการฝึกซ้อม<br><br>
+		 <img src="1.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="1-1.jpg"><br>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; vertical-align: top;">15 นาที</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
+        2. ขั้นอธิบายสาธิต (Explanation)       
+      </td>
+      <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
+        - เทคนิคการเลี้ยงบอล<br>
+        - การจัดระเบียบร่างกาย<br>
+        - การใช้หลังเท้าสัมผัสบอล<br>
+        - การย่อเข่า<br>
+        - การการมอบไปรอบๆ<br>
+        - ระยะห่างระหว่างบอลกับเท้า<br><br>
+		 <img src="2.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="2-2.jpg"><br>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; vertical-align: top;">5 นาที</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
+        3. ขั้นปฏิบัติ  (Practice)
+      </td>
+      <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
+        - จัดสนามขนาด 10 * 10 เมตร ให้นักเรียนเลี้ยงบอลหลบหลักกรวย เป็นรูปแบบชิกแซก<br>
+		- โดยเน้นไปที่การใช้สัมผัสบอลให้ถี่ และใกล้ตัว<br><br>
+		 <img src="3.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="3-3.jpg"><br>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; vertical-align: top;">50 นาที</td>
+    </tr>
+	<tr>
+      <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
+        4. ขั้นนำไปใช้ (Application)        
+      </td>
+      <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
+        - แบ่งนักเรียนออกเป็น 2 ทีม  จัดสนาม 10*20 เมตร มีช่องว่างตรงกลางขนาด 1*1 เมตร จำนวน 2 ช่อง<br>
+		- แบ่งเป็นฝ่ายรุก-และรับ<br>
+		- ให้ฝ่ายรุกออกมา 1 คน ฝ่ายรับ 1 คน<br>
+		- โค้ชเสริฟบอลให้ฝ่ายรุก<br>
+		- ให้ฝ่ายรุกเลี้ยงบอลผ่านช่องที่ตั้งไว้ โดยต้องผ่านทั้งคนและบอล<br>
+		- ฝ่ายรับพยายามป้องกันไม่ให้ฝ่ายรุกเลี้ยงผ่าน<br><br>
+		 <img src="4.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="4-4.jpg"><br>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; vertical-align: top;">40 นาที</td>
+    </tr>
+	<tr>
+      <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
+        5. ขั้นสรุป (Summary & Reflection)       
+      </td>
+      <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
+        - นักกีฬายืดเหยียดกล้ามเนื้อ<br>
+		- สอบถามความรู้ที่ได้การฝึกในวันนี้ ว่าได้รับอะไรบ้าง<br>
+		- ในการเลี้ยงบอลจะต้องคำนึงถึงอะไรบ้าง<br>
+		- ข้อสำคัญในการเลี้ยง จะต้องทำอย่างไร<br>
+		- สรุปผล ชื่นชมนักกีฬาที่มีความตั้งใจในการฝึกซ้อมและบอกให้นักกีฬากลับไปแก้ไขจุดที่บกพร่อง<br><br>
+		 <img src="5.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="5-5.jpg"><br>
+		
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; vertical-align: top;">10 นาที</td>
+    </tr>
+  </tbody>
+</table>
+                            <!--gfhl;--> </div>
+                            </div>
+                                </div>
+                            </div>
+                </div>
+                <div class="tab-content" id="certificate">
+                    <p>เนื้อหาสำหรับแท็บแบบทดสอบ...</p>
+                </div>
+                <div class="tab-content" id="support">
+                    <p>เนื้อหาสำหรับแท็บสอบถามผู้สอน...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- <div id="activate-windows-mockup">
+        Activate Windows
+        <a href="#">Go to Settings to activate Windows.</a>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="in_couse.js"></script>
+</body>
+</html>
