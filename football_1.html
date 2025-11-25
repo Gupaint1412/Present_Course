@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Staff Profile</title>
 
-   <!-- Font Awesome -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -13,9 +13,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="course.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="course.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/2.3.5/css/dataTables.bootstrap5.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.7/css/responsive.bootstrap5.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="detail_user.css">
     <style>
@@ -126,113 +127,105 @@
 		
         <table class="table table-hover" id="example">
           <thead> 
-		
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">ผู้เข้าร่วมอบรม</th>              	
-			  <th scope="col">วันที่ส่งรายงาน</th>
-			  <th scope="col">สถานะ</th>
-			  <th scope="col">ตรวจงาน</th>
-			  	
+              <th scope="col" style="text-align: center;">#</th>
+              <th scope="col" style="text-align: center;">ผู้เข้าร่วมอบรม</th>              	
+              <th scope="col" style="text-align: center;">วันที่ส่งรายงาน</th>
+              <th scope="col" style="text-align: center;">สถานะ</th>
+              <th scope="col" style="text-align: center;">ตรวจงาน</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">1</th>
               <td>นายลิเวอร์พลู คาบ้าน</td>
-              <td></td>
-			  <td><div class="status-box red">ยังไม่ส่ง</div></td>
-			  <td></td>
-		      
-			  
-			
+              <td>-</td>
+			        <td style="text-align: center;"><span class="badge text-bg-danger">ยังไม่ส่ง</span></td>
+			        <td>-</td>		      						
             </tr>
-			<tr>
+			      <tr>
               <th scope="row">2</th>
               <td>นายชัย ทำดี</td>
-			  <td></td>
-			  <td><div class="status-box red">ยังไม่ส่ง</div></td>
-			  <td></td>
-			  
+			        <td>-</td>
+			        <td style="text-align: center;"><span class="badge text-bg-danger">ยังไม่ส่ง</span></td>
+			        <td>-</td>			  
             </tr>
-			<tr>
+			      <tr>
               <th scope="row">3</th>
               <td>ร้อยตรีพง มีงาน</td>
-             <td></td>
-			  <td><div class="status-box red">ยังไม่ส่ง</div></td>
-			  <td></td>
+              <td>-</td>
+			        <td style="text-align: center;"><span class="badge text-bg-danger">ยังไม่ส่ง</span></td>
+			        <td>-</td>
             </tr>
-			<tr>
+			      <tr>
               <th scope="row">4</th>
               <td>นายปารเมศ ฟักพยุง</td>
-              <td>24 พฤศจิกายน 2568</td> 
-			  <td><div class="status-box blue">รอตรวจสอบ</div></td>
-			  <td><a href="paramath.html" target= blank>รายละเอียด </a></td>
+              <td>24 พ.ย. 2568</td> 
+              <td style="text-align: center;"><span class="badge text-bg-primary">รอตรวจสอบ</span></td>			        
+			        <td><a href="paramath.html" target= blank>รายละเอียด </a></td>
             </tr>
-			<tr>
+			      <tr>
               <th scope="row">5</th>
               <td>Mr.Notthingham ThreeGoal</td>
-             <td></td>
-			  <td><div class="status-box red">ยังไม่ส่ง</div></td>
-			  <td></td>
+              <td>-</td>
+			        <td style="text-align: center;"><span class="badge text-bg-danger">ยังไม่ส่ง</span></td>
+			        <td>-</td>
             </tr>
-			<tr>
+			      <tr>
               <th scope="row">6</th>
               <td>นายอดิศักดิ์ พิมพงษ์</td>
-            <td></td>
-			  <td><div class="status-box red">ยังไม่ส่ง</div></td>
-			  <td></td>
+              <td>-</td>
+			        <td style="text-align: center;"><span class="badge text-bg-danger">ยังไม่ส่ง</span></td>
+			        <td>-</td>
             </tr>
-			<tr>
+			      <tr>
               <th scope="row">7</th>
               <td>นายรวีโรจน์ สุระเชิดเกียรติ</td>
-              <td></td>
-			  <td><div class="status-box red">ยังไม่ส่ง</div></td>
-			  <td></td>
+              <td>-</td>
+			        <td style="text-align: center;"><span class="badge text-bg-danger">ยังไม่ส่ง</span></td>
+			        <td>-</td>
             </tr>
-			<tr>
+			      <tr>
               <th scope="row">8</th>
               <td>ว่าที่ร้อยตรีหญิงนภาพร สุวรรณบุปผา</td>              
-			  <td>20 พฤศจิกายน 2568</td>			  
-			  <td><div class="status-box green">ผ่าน</div></td>
-			  <td>รายละเอียด</td>
+			        <td>20 พ.ย. 2568</td>			  
+			        <td style="text-align: center;"><span class="badge text-bg-success">ผ่าน</span></td>
+			        <td>รายละเอียด</td>
             </tr>
-			<tr>
+			      <tr>
               <th scope="row">9</th>
               <td>นางสาวสโรชา สุทธิสาร</td>
-              <td></td>
-			  <td><div class="status-box red">ยังไม่ส่ง</div></td>
-			  <td></td>
+              <td>-</td>
+  			      <td style="text-align: center;"><span class="badge text-bg-danger">ยังไม่ส่ง</span></td>
+			        <td>-</td>
             </tr>
-			<tr>
+			      <tr>
               <th scope="row">10</th>
               <td>นายวรวุทธ ใจอ่อน</td>
-              <td></td>
-			  <td><div class="status-box red">ยังไม่ส่ง</div></td>
-			  <td></td>
-			<tr>
+              <td>-</td>
+			        <td style="text-align: center;"><span class="badge text-bg-danger">ยังไม่ส่ง</span></td>
+			        <td>-</td>
+			      <tr>
               <th scope="row">11</th>
               <td>ร้อยตำรวจเอกปิล็อก อาจจะมา</td>
-              <td></td>
-			  <td><div class="status-box red">ยังไม่ส่ง</div></td>
-			  <td></td>
+              <td>-</td>
+			        <td style="text-align: center;"><span class="badge text-bg-danger">ยังไม่ส่ง</span></td>
+			        <td>-</td>
             </tr>
-			<tr>
+			      <tr>
               <th scope="row">12</th>
               <td>นายภูมิใจ ผิดหวัง</td>
-             <td></td>
-			  <td><div class="status-box red">ยังไม่ส่ง</div></td>
-			  <td></td>
+              <td></td>
+			        <td style="text-align: center;"><span class="badge text-bg-danger">ยังไม่ส่ง</span></td>
+			        <td>-</td>
             </tr>
-			<tr>
+			      <tr>
               <th scope="row">13</th>
               <td>นายสะอาด ไม่อาบน้ำ</td>
                <td></td>
-			  <td><div class="status-box red">ยังไม่ส่ง</div></td>
-			  <td></td>
-            </tr>
-      
-			
+			        <td style="text-align: center;"><span class="badge text-bg-danger">ยังไม่ส่ง</span></td>
+			        <td>-</td>
+            </tr>      			
           </tbody>
         </table>
         </div>
@@ -245,14 +238,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.datatables.net/2.3.5/js/dataTables.js"></script>
 <script src="https://cdn.datatables.net/2.3.5/js/dataTables.bootstrap5.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.7/js/dataTables.responsive.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.7/js/responsive.bootstrap5.js"></script>
+<!-- <script src="script.js"></script> -->
 <script>
   new DataTable('#example', {
-    responsive: true,
-    language: {
-        url: '//cdn.datatables.net/plug-ins/2.3.5/i18n/th.json',
-    },
+    responsive: true
 });
 </script>
 </body>
